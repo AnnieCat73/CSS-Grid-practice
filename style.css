@@ -33,99 +33,117 @@ body {
 /* Task 1 */
 
 .task-1.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* Task 2 */
 
 .task-2.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  align-items: center;
 }
 
 .task-2 .item-1 {
+  grid-column: 2 / 6;
 }
 
 .task-2 .item-2 {
+  grid-column: 6 /span 6;
 }
 
 /* Task 3.1 */
 
 .task-3-1.container {
+  height: 100vh;
+  display: grid;
+  /*max-width: 721px;*/
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto auto;
+  gap: 24px;
 }
 
 @media (min-width: 720px) {
   .task-3-1.container {
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+      "header header"
+      "navigation navigation"
+      "sidebar main"
+      "ads footer";
   }
 
   .task-3-1 .header {
+    grid-area: header;
   }
 
   .task-3-1 .navigation {
+    grid-area: navigation;
   }
 
   .task-3-1 .main {
+    grid-area: main;
   }
 
   .task-3-1 .sidebar {
+    grid-area: sidebar;
   }
 
   .task-3-1 .ads {
+    grid-area: ads;
   }
 
   .task-3-1 .footer {
+    grid-area: footer;
   }
 }
 
 @media (min-width: 1020px) {
+  .task-3-1.contaier {
+    
+    grid-template-columns: 100px 1fr 30%;
+    grid-template-rows: auto auto 1fr auto;
+  }
   .task-3-1 .header {
+    grid-column: 1 / 4;
   }
 
   .task-3-1 .navigation {
+    grid-column: 2 / 3;
   }
 
   .task-3-1 .main {
+    grid-column: 2 / 3;
   }
 
   .task-3-1 .sidebar {
+    grid-column: 1 /2;
+    grid-row: 2 / 4;
   }
 
   .task-3-1 .ads {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
   }
 
   .task-3-1 .footer {
+    grid-column: 1 / 4;
+    grid-row: 5 /6;
   }
-}
-
-/* Task 3.2 */
-
-.task-3-2.container {
-}
-
-.task-3-2 .header {
-}
-
-.task-3-2 .navigation {
-}
-
-.task-3-2 .ads {
-}
-
-.task-3-2 .sidebar {
-}
-
-.task-3-2 .main {
-}
-
-.task-3-2 .footer {
-}
-
-@media (min-width: 720px) {
-}
-
-@media (min-width: 1020px) {
 }
 
 /* Task 4 */
 
 .task-4.container {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .task-4 .item-5 {
@@ -134,16 +152,28 @@ body {
 /* Task 5 */
 
 .task-5.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .task-5 .item-1 {
+  grid-column: 1/ span 3;
+  grid-row: 1 /span 3;
 }
 
 .task-5 .item-2 {
+  grid-column: 4 / span 3;
+  grid-row: 4 / span 3;
 }
 
 .task-5 .item-3 {
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
 }
 
 .task-5 .item-4 {
+  grid-column: 10 / span 3;
+  grid-row: 10 / span 3;
 }
